@@ -5,6 +5,7 @@ const UserListSchema = mongoose.Schema({
     email: { type: String, required: true },
     version: { type: Number, required: true },
     title: { type: String, required: true },
+    points: { type: Number, required: true },
     faction: { type: String, required: true },
     commander: { type: String, required: true },
     redObjId: { type: String, required: true },

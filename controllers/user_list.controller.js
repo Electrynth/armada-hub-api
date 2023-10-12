@@ -17,7 +17,7 @@ const findUserListById = async (req, res, next) => {
 const findListsByEmail = async (req, res, next) => {
     try {
         const email = req.query.email;
-        const foundLists = await UserList.find({ email: email }, { title: 1, listId: 1, commander: 1, faction: 1 });
+        const foundLists = await UserList.find({ email: email }, { title: 1, listId: 1, points: 1, faction: 1 });
         res.status(200).json(foundLists)
     } catch (e) {
         console.error(e.message);
