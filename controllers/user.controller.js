@@ -2,8 +2,8 @@ const User = require('../models/user.model.js');
 
 const findUserByEmail = async (req, res, next) => {
     try {
-        const email = req.params.email;
-        const foundUser = await User.find({ email });
+        const email = req.query.email;
+        const foundUser = await User.findOne({ email });
         res.status(200).json(foundUser);
         next();
     } catch (e) {
